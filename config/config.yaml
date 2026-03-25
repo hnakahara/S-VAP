@@ -1,0 +1,24 @@
+vcfs: config/vcfs.tsv
+
+
+# reference
+reference: path/to/hg19.fa
+
+# vcf2maf
+cachedir: path/to/.vep112
+tommo: path/to/tommo-54kjpn-20230626-GRCh37_lifted_from_GRCh38-af-autosome.vcf.gz
+
+# OncoKB-annotator
+OncoDir: path/to/oncokb-annotator-3.4.1
+token: "your_oncokb_token"
+
+# intervar
+intervar: path/to/InterVar
+annovar: path/to/annovar
+
+# clinvar file
+clinvar: path/to/clinvar_hg19.vcf.gz
+
+# spliceai files of plugin for ensembl vep
+spliceai_snv: path/to/spliceai_scores.raw.snv.hg19.vcf.gz
+spliceai_indel: path/to/spliceai_scores.raw.indel.hg19.vcf.gz
