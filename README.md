@@ -10,12 +10,15 @@ This pipeline is a Snakemake-based workflow that generates Mutation Annotation F
 - Ensures reproducibility using Snakemake
 
 ## Dependencies
-Please install the following tools manually:
+Please install the following tools and data manually:
 
 - InterVar  
 - ANNOVAR  
 - oncokb-annotator  
 - Apptainer (Singularity)
+- VCF file of ClinVar
+- VEP cache data
+- VCF file of Population allele frequency (e.g. jMorp)
 
 ## Environment
 - OS: Rocky Linux v9.6  
@@ -72,6 +75,13 @@ snakemake --use-conda --use-apptainer --cores 4 --apptainer-args "" --rerun-trig
 ```bash
 snakemake --use-conda --use-apptainer --cores 4 --apptainer-args "--bind /your_directory" --rerun-triggers mtime
 ```
+
+### Troubleshooting
+
+If a VEP plugin error occurs during the `vcf2maf` step, you may need to replace the `vcf2maf.pl` script.
+
+You can download the latest version from the official repository:
+https://github.com/mskcc/vcf2maf
 
 ## Output
 
