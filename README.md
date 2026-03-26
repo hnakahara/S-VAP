@@ -67,7 +67,7 @@ Edit `config/vcfs.tsv`:
 ### Basic execution
 
 ```bash
-snakemake --use-conda --use-apptainer --cores 4 --apptainer-args "" --rerun-triggers mtime
+snakemake --use-conda --use-apptainer --cores 4 --apptainer-args --rerun-triggers mtime
 ```
 
 ### With bind option
@@ -144,6 +144,17 @@ python CreateVcf.py \
 
 **Input example:**  
 Refer to `example/input_for_transvar.csv` for the expected input format.
+
+Example format (tab-delimited):
+
+| gene  | cdna      | protein | transcript     |
+|-------|-----------|--------|----------------|
+| MUTYH | 892-2A>G  |        | NM_001048171   |
+| ABL1  | 925C>G    | P309A  | NM_005157      |
+| TERT  | -124C>T   |        | NM_198253      |
+
+- The header names must not be changed.
+- The `protein` column is optional. It can be filled or left blank and does not affect the processing.
 
 
 ## License
