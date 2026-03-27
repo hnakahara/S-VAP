@@ -161,3 +161,12 @@ Example format (tab-delimited):
 
 This project is licensed under the Creative Commons Attribution-NonCommercial (CC-BY-NC) license.  
 For more details, refer to the LICENSE file.
+
+## Web Application (Beta) and Public API Demo
+
+A beta version of the web application implementing a portion of the current pipeline algorithm is available to a limited set of users in Japan.
+
+For demonstration purposes, a publicly accessible REST API is also provided:
+
+- API documentation (Swagger UI):  
+  https://1603-027.a.hiroshima-u.ac.jp/api/swagger/
